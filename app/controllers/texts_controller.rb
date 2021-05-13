@@ -10,7 +10,10 @@ class TextsController < ApplicationController
   end
 
   def rewrite_text
-    paraphrased_text = api_call(params[:paraphrase][:text])
+    input = params[:paraphrase][:text]
+    input.lstrip!
+    input.gsub!("\r\n\r\n", "")
+    paraphrased_text = api_call(input)
     @@parsed_texts << paraphrased_text
     redirect_to texts_path
   end
