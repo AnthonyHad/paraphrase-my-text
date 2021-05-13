@@ -1,0 +1,17 @@
+<h1>Praphrasing Tool</h1>
+
+<h2>Please input the texts you would like to paraphrase</h2>
+  <%= simple_form_for :paraphrase, url: paraphrase_path, :method => 'get' do |f| %>
+    <%= f.input :text, as: :text%>
+    <%= f.button :submit, "Submit" %>
+  <% end %>
+
+  <br>
+
+  <h2>Please click here if you are done submitting your texts</h2>
+  <%= link_to "Done!", show_texts_path %>
+
+  <h2>Please click here if you would like to delete all the submitted texts!</h2>
+  <%= link_to "Delete", delete_texts_path %>
+
+

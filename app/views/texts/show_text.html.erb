@@ -1,0 +1,9 @@
+<h1>Here are your paraphrased texts</h1>
+
+<% if @texts.empty? %>
+<h2>You have not added some texts to paraphrase!</h2>
+<% end  %>
+
+<% @texts.each do |text| %>
+<%= text %>
+<% end %>
