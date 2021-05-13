@@ -15,7 +15,7 @@ class TextsController < ApplicationController
     input.gsub!("\r\n\r\n", "")
     paraphrased_text = api_call(input)
     @@parsed_texts << paraphrased_text
-    redirect_to texts_path
+    redirect_to texts_path, notice: "Text Successfully Added"
   end
 
 
@@ -25,7 +25,7 @@ class TextsController < ApplicationController
 
   def delete_texts
     @@parsed_texts.clear
-    redirect_to texts_path
+    redirect_to texts_path, notice: "Texts Successfully Deleted"
   end
 
   private
