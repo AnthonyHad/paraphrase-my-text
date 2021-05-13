@@ -1,5 +1,4 @@
-class TextsController < ApplicationController
-  require 'uri'
+require 'uri'
 require 'net/http'
 require 'openssl'
 require'json'
@@ -50,4 +49,3 @@ class TextsController < ApplicationController
   end
 end
 
-end

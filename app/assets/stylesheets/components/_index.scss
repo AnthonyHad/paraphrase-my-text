@@ -1,4 +1,27 @@
 // Import your components CSS files here.
-@import "alert";
-@import "avatar";
-@import "navbar";
+@import "card";
+@import "button";
+
+
+body {
+  background-color: $background;
+}
+
+h2 {
+  font-size: 1rem;
+  font-family: $montserrat;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: $montserrat;
+}
+
+label.text.required {
+  text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 500px;
+}

@@ -1,0 +1,17 @@
+.button {
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  width: 100px;
+  background-color: $btn-blue;
+  color: $white;
+  text-decoration: none;
+  padding: 2px;
+  text-align: center;
+  font-size: small;
+  font-family: $raleway;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
