@@ -1,17 +1,16 @@
+
 <div class="main d-flex align-items-center flex-column mt-4">
+    <h1>Here are your paraphrased texts✌️</h1>
+  <% if @texts.empty? %>
+  <h2>You have not added some texts to paraphrase! 😢</h2>
+  <% end  %>
 
-<h1>Here are your paraphrased texts✌️</h1>
-
-<% if @texts.empty? %>
-<h2>You have not added some texts to paraphrase! 😢</h2>
-<% end  %>
-
-
-<% @texts.each_with_index do |text, i| %>
-<div class="card">
-  <h2><%= "Text ##{i+1} 📃" %></h2>
-  <p><%= text %></p>
-</div>
-<% end %>
+  <% @texts.each_with_index do |text, i| %>
+    <div class="card">
+      <h2><%= "Text ##{i+1} 📃" %></h2>
+      <p><%= text %></p>
+    </div>
+  <% end %>
+  <%= link_to "Back", texts_path, class: "button" %>
 </div>
 
