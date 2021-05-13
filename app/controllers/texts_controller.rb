@@ -18,7 +18,6 @@ class TextsController < ApplicationController
     redirect_to texts_path, notice: "Text Successfully Added"
   end
 
-
   def show_texts
     @texts = @@parsed_texts
   end
@@ -51,4 +50,3 @@ class TextsController < ApplicationController
   return parsed["rewrite"]
   end
 end
-
